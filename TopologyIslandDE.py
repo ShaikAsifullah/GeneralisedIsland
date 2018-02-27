@@ -963,7 +963,7 @@ def beale_function(x):
 
 bounds = [(-4.5, 4.5),(-4.5, 4.5)]
 number_of_islands = 4
-KEY = "islandm"
+KEY = "ISLANDNUM"
 def island_method(island_params):
     island_marker = island_params[0]
     seed = island_params[1]
@@ -980,8 +980,8 @@ def island_method(island_params):
 
 parallelization = []
 random_seeds = random.sample(range(1, 100), number_of_islands)
-for i in range(number_of_islands):
-    parallelization.append((KEY+str(i),random_seeds[i]))
+for i in range(1,number_of_islands+1):
+    parallelization.append((KEY+str(i),random_seeds[i-1]))
 
 
 
